@@ -1,0 +1,72 @@
+[
+    {
+        "id" : 1,
+        "img" : "Images/Vegetables/onion.jpeg",
+        "name" : "Onion",
+        "kg" : 1,
+        "price" : 60
+    },
+    {
+        "id" : 2,
+        "img" : "Images/Vegetables/tomato.jpeg",
+        "name" : "Tomato",
+        "kg" : 1,
+        "price" : 120
+    },
+    {
+        "id" : 3,
+        "img" : "Images/Vegetables/potato.jpeg",
+        "name" : "Potato",
+        "kg" : 1,
+        "price" : 50
+    },
+    {
+        "id" : 4,
+        "img" : "Images/Vegetables/carrot.jpeg",
+        "name" : "Carrot",
+        "kg" : 1,
+        "price" : 70
+    },
+    {
+        "id" : 5,
+        "img" : "Images/Vegetables/beans.jpeg",
+        "name" : "Beans",
+        "kg" : 1,
+        "price" : 60
+    },
+    {
+        "id" : 6,
+        "img" : "Images/Vegetables/beetroot.jpeg",
+        "name" : "Beetroot",
+        "kg" : 1,
+        "price" : 50
+    },
+    {
+        "id" : 7,
+        "img" : "Images/Vegetables/cauliflower.jpeg",
+        "name" : "Cauliflower",
+        "kg" : 1,
+        "price" : 140
+    },
+    {
+        "id" : 8,
+        "img" : "Images/Vegetables/raddish.jpeg",
+        "name" : "Raddish",
+        "kg" : 1,
+        "price" : 130
+    },
+    {
+        "id" : 9,
+        "img" : "Images/Vegetables/ginger.jpeg",
+        "name" : "Ginger",
+        "kg" : 1,
+        "price" : 200
+    },
+    {
+        "id" : 10,
+        "img" : "Images/Vegetables/garlic.jpeg",
+        "name" : "Garlic",
+        "kg" : 1,
+        "price" : 600
+    }
+]

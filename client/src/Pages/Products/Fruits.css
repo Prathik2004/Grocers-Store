@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+DE+Grund:wght@100..400&display=swap');
+.fruits-header{
+    background-color: rgb(81, 120, 121);
+    height: 500px;
+    width: 100%;
+}
+.fruits-header-backgroundimg{
+    width: 500px;
+    height: 350px;
+    position: relative;
+    left: 850px;
+    top: 30px;
+}
+.fruits-header h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 80px;
+    font-weight: 400;
+    position: relative;
+    bottom: 320px;
+    left: 100px;
+}
+.fruits-header h1 span{
+    color: rgb(163, 189, 58);
+}
+.category-buttons{
+    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+}
+.category-buttons a{
+    margin: 20px;
+    height: 40px;
+    width: 100px;
+    border: 3px solid black;
+    border-radius: 20px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+.fruits-main{
+    display: flex;
+    width: 100%;
+}
+.fruits-filter-sort{
+    width: 30%;
+}
+.filter-maincontent{
+    width: 70%;
+}
+.fruits-filter-sort select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.fruits-featured-fruitsvegetables{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    grid-template-rows: repeat(1, auto); /* 2 rows, height auto */
+    gap: 40px; /* Space between grid items */
+    justify-content: center; /* Center the grid horizontally */
+    padding: 20px; /* Add padding around the grid */
+    position: relative;
+    bottom: 0px;
+}
+.fruits-featured-fruitsvegetables-list {
+    border-radius: 10%;
+    overflow: hidden;
+    display: flex; /* Use flexbox for better alignment */
+    flex-direction: column;
+    align-items: center; /* Center the image horizontally */
+    justify-content: center; /* Center the image vertically */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px; /* Add padding inside the box */
+    width: 200px;
+    /* background-color: rgb(192, 226, 238); Optional: Set a semi-transparent background */
+}
+
+.fruits-featured-fruitsvegetables-list img {
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+}
+.fruits-featured-fruitsvegetables-list button{
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+}
+.fruits-featured-fruitsvegetables-list button:hover{
+    background-color: white;
+    color: black;
+}
+.fruits-quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px; /* same as the button width */
+}
+
+.fruits-quantity-controls button {
+    background-color: black;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+}
+
+.quantity-controls button:hover {
+    background-color: white;
+    color: black;
+}
+
+.quantity-controls span {
+    width: 40px;
+    text-align: center;
+}

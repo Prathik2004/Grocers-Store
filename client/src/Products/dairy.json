@@ -1,0 +1,72 @@
+[
+    {
+        "id" : 1,
+        "img" : "Images/Dairy/tonedmilk.jpeg",
+        "name" : "Toned Milk",
+        "kg" : 1,
+        "price" : 50
+    },
+    {
+        "id" : 2,
+        "img" : "Images/Dairy/curd.jpeg",
+        "name" : "Curd",
+        "kg" : 1,
+        "price" : 70
+    },
+    {
+        "id" : 3,
+        "img" : "Images/Dairy/butter.jpeg",
+        "name" : "Butter",
+        "kg" : 1,
+        "price" : 300
+    },
+    {
+        "id" : 4,
+        "img" : "Images/Dairy/cheeseslice.jpeg",
+        "name" : "Cheese Slice",
+        "kg" : 1,
+        "price" : 200
+    },
+    {
+        "id" : 5,
+        "img" : "Images/Dairy/ghee.jpeg",
+        "name" : "Ghee",
+        "kg" : 1,
+        "price" : 700
+    },
+    {
+        "id" : 6,
+        "img" : "Images/Dairy/yogurt.jpeg",
+        "name" : "Yogurt",
+        "kg" : 1,
+        "price" : 70
+    },
+    {
+        "id" : 7,
+        "img" : "Images/Dairy/paneer.jpeg",
+        "name" : "Paneer",
+        "kg" : 1,
+        "price" : 40
+    },
+    {
+        "id" : 8,
+        "img" : "Images/Dairy/cheesecube.jpeg",
+        "name" : "Cheese Cube",
+        "kg" : 1,
+        "price" : 200
+    },
+    {
+        "id" : 9,
+        "img" : "Images/Dairy/lowfatmilk.jpeg",
+        "name" : "Low Fat Milk",
+        "kg" : 1,
+        "price" : 70
+    },
+    {
+        "id" : 10,
+        "img" : "Images/Dairy/lowfatpaneer.jpeg",
+        "name" : "Low Fat Paneer",
+        "kg" : 1,
+        "price" : 450
+    }
+]

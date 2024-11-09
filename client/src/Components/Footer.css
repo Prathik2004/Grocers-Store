@@ -1,0 +1,85 @@
+footer {
+    color: black;
+    position: relative;
+    top: 100px;
+}
+
+.footer-backgroundcolor {
+    background-color: aliceblue;
+    width: 100%;
+    height: 300px;
+}
+
+.address {
+    position: relative;
+    bottom: 270px;
+    left: 70px;
+    letter-spacing: 1px;
+    font: bolder;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.address-map {
+    position: relative;
+    bottom: 260px;
+    left: 30px;
+    border-radius: 50%;
+}
+
+.footer-info h3 {
+    font-weight: 500;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-info h2 {
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-info {
+    display: grid;
+    grid-template-columns: 100px 100px 100px auto;
+    gap: 130px;
+    position: relative;
+    bottom: 510px;
+    left: 300px;
+}
+.footer-us a{
+    text-decoration: none;
+    color: black;
+}
+.footer-socialmedia a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-socialmedia:visited {
+    color: black;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-subscribe form input[name = footer-username] {
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+}
+.footer-subscribe form input[type=submit]{
+    position: relative;
+    left: 13%;
+    width: 120px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
+.footer-subscribe form input[type=submit]{
+    content: 'Submitted';
+}
+
