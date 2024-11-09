@@ -2,7 +2,7 @@ import React from 'react'
 
 const Dairy = () => {
   return (
-    <div>Dairy</div>
+    <div>This is a dairy page</div>
   )
 }
 
