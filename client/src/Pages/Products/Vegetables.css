@@ -56,7 +56,7 @@
     border-radius: 4px;
     font-size: 14px;
 }
-.vegetables-featured-vegetablesvegetables{
+.vegetables-featured-fruitsvegetables{
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
     grid-template-rows: repeat(1, auto); /* 2 rows, height auto */
@@ -66,7 +66,7 @@
     position: relative;
     bottom: 0px;
 }
-.vegetables-featured-vegetablesvegetables-list {
+.vegetables-featured-fruitsvegetables-list {
     border-radius: 10%;
     overflow: hidden;
     display: flex; /* Use flexbox for better alignment */
@@ -79,18 +79,18 @@
     /* background-color: rgb(192, 226, 238); Optional: Set a semi-transparent background */
 }
 
-.vegetables-featured-vegetablesvegetables-list img {
+.vegetables-featured-fruitsvegetables-list img {
     width: 100px; /* Adjust size as needed */
     height: 100px;
 }
-.vegetables-featured-vegetablesvegetables-list button{
+.vegetables-featured-fruitsvegetables-list button{
     background-color: black;
     color: white;
     width: 100px;
     height: 40px;
     border-radius: 20px;
 }
-.vegetables-featured-vegetablesvegetables-list button:hover{
+.vegetables-featured-fruitsvegetables-list button:hover{
     background-color: white;
     color: black;
 }
