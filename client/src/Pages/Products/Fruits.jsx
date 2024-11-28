@@ -57,7 +57,9 @@ const Fruits = () => {
             <option value="priceHighToLow">Price: High to Low</option>
           </select>
 
-          <p>Filter by :</p>
+          <div className="filter">
+            <p>Filter by :</p>
+          </div>
         </div>
         <div className="fruits-maincontent">
           <div className="fruits-featured-fruitsvegetables">
