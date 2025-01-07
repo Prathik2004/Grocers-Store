@@ -59,6 +59,7 @@ const Fruits = () => {
 
           <div className="filter">
             <p>Filter by :</p>
+            
           </div>
         </div>
         <div className="fruits-maincontent">
