@@ -3,7 +3,7 @@ const express = require('express');
 const http = require('http');
 const cors = require('cors');
 const bcrypt = require('bcrypt');
-require('./database/connection'); // Ensure this connects to MongoDB
+require('./database/connection'); 
 const LoginAccDetails = require('./models/LoginAccDetails');
 
 const app = express();
@@ -12,13 +12,13 @@ app.use(cors());
 
 // Register user
 app.post('/register', async (req, res) => {
-    console.log("Received registration data:", req.body); // Log the incoming data
+    console.log("Received registration data:", req.body); 
     try {
         const user = await LoginAccDetails.create(req.body);
-        console.log("User saved:", user); // Log the saved user
+        console.log("User saved:", user); 
         res.status(201).json(user);
     } catch (err) {
-        console.error("Error saving user:", err); // Log the error
+        console.error("Error saving user:", err); 
         res.status(400).json({ error: err.message });
     }
 });

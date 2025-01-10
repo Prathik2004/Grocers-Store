@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 
 const LoginAccDetailsSchema = new mongoose.Schema({
     name: { type: String, required: true },
-    number: { type: Number, required: true }, // Ensure this is a Number
-    email: { type: String, required: true, unique: true }, // Ensure unique constraint
+    number: { type: Number, required: true }, 
+    email: { type: String, required: true, unique: true }, 
     password: { type: String, required: true }
 });
 
