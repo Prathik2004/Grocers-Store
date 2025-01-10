@@ -11,7 +11,7 @@ const Fruits = () => {
   const [sortOption, setSortOption] = useState('');
 
   // Function to handle sorting
-  const handleSortChange = (event) => {
+  const handleSortChange = (event) => {x    
     setSortOption(event.target.value);
   };
 
