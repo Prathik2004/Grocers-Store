@@ -46,6 +46,7 @@ const Cart = () => {
             <div className="cart-total">
               <h4>Total Subtotal: &#8377;{calculateSubtotal().toFixed(2)}</h4> {/* Display total subtotal */}
             </div>
+            <button className="place-order-btn">Place Order</button> {/* Place Order Button */}
           </div>
         )}
       </div>

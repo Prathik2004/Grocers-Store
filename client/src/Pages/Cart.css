@@ -47,3 +47,22 @@
 .cart-item .item-name {
     justify-content: flex-start;
 }
+.place-order-btn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 200px;
+    text-align: center;
+}
+
+.place-order-btn:hover {
+    background-color: #0056b3;
+}
