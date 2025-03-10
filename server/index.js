@@ -5,7 +5,7 @@ const cors = require('cors');
 const bcrypt = require('bcrypt');
 require('./database/connection'); 
 const LoginAccDetails = require('./models/LoginAccDetails');
-
+const Order = require('./models/Orders');
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -37,6 +37,18 @@ app.post('/login', async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
+
+router.post('/orders', async (req, res) => {
+    try {
+      const { name, address, phone, cart, subtotal } = req.body;
+      const newOrder = new Order({ name, address, phone, cart, subtotal });
+  
+      await newOrder.save();
+      res.status(201).json({ message: "Order placed successfully!" });
+    } catch (error) {
+      res.status(500).json({ error: "Failed to place order" });
+    }
+  });
 
 const myServer = http.createServer(app);
 myServer.listen(8000, () => {

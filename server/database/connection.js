@@ -1,7 +1,7 @@
 // connection.js
 const mongoose = require('mongoose');
 
-const url = 'mongodb://localhost:27017/GrocersStore'; // Make sure this matches your setup
+const url = 'mongodb://localhost:27017/GrocersStore'; 
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("MongoDB connected"))
