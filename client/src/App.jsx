@@ -12,6 +12,7 @@ import Cart from './Pages/Cart'
 import Fruits from './Pages/Products/Fruits'
 import Vegetables from './Pages/Products/Vegetables'
 import Dairy from './Pages/Products/Dairy'
+import PlaceOrder from './Pages/PlaceOrder'
 
 const App = () => {
   return (
