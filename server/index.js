@@ -38,7 +38,7 @@ app.post('/login', async (req, res) => {
     }
 });
 
-router.post('/orders', async (req, res) => {
+app.post('/orders', async (req, res) => {
     try {
       const { name, address, phone, cart, subtotal } = req.body;
       const newOrder = new Order({ name, address, phone, cart, subtotal });
