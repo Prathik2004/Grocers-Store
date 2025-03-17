@@ -1,70 +1,70 @@
 [
     {
         "id" : 1,
-        "img" : "Images/Fruits/apple.jpeg",
+        "img" : "/Images/Fruits/apple.jpeg",
         "name" : "Apple",
         "kg" : 1,
         "price" : 180
     },
     {
         "id" : 2,
-        "img" : "Images/Fruits/bananas.jpeg",
+        "img" : "/Images/Fruits/bananas.jpeg",
         "name" : "Banana",
         "kg" : 1,
         "price" : 100
     },
     {
         "id" : 3,
-        "img" : "Images/Fruits/orange.jpeg",
+        "img" : "/Images/Fruits/orange.jpeg",
         "name" : "Orange",
         "kg" : 1,
         "price" : 120
     },
     {
         "id" : 4,
-        "img" : "Images/Fruits/mango.jpeg",
+        "img" : "/Images/Fruits/mango.jpeg",
         "name" : "Mango",
         "kg" : 1,
         "price" : 150
     },
     {
         "id" : 5,
-        "img" : "Images/Fruits/pineapple.jpeg",
+        "img" : "/Images/Fruits/pineapple.jpeg",
         "name" : "Pineapple",
         "kg" : 1,
         "price" : 200
     },
     {
         "id" : 6,
-        "img" : "Images/Fruits/pomogranate.jpeg",
+        "img" : "/Images/Fruits/pomogranate.jpeg",
         "name" : "Pomegranate",
         "kg" : 1,
         "price" : 110
     },
     {
         "id" : 7,
-        "img" : "Images/Fruits/guava.jpeg",
+        "img" : "/Images/Fruits/guava.jpeg",
         "name" : "Guava",
         "kg" : 1,
         "price" : 90
     },
     {
         "id" : 8,
-        "img" : "Images/Fruits/papaya.jpeg",
+        "img" : "/Images/Fruits/papaya.jpeg",
         "name" : "Papaya",
         "kg" : 1,
         "price" : 210
     },
     {
         "id" : 9,
-        "img" : "Images/Fruits/watermelon.jpeg",
+        "img" : "/Images/Fruits/watermelon.jpeg",
         "name" : "Watermelon",
         "kg" : 1,
         "price" : 220
     },
     {
         "id" : 10,
-        "img" : "Images/Fruits/muskmelon.jpeg",
+        "img" : "/Images/Fruits/muskmelon.jpeg",
         "name" : "Muskmelon",
         "kg" : 1,
         "price" : 140
