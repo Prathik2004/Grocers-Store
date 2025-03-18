@@ -13,7 +13,6 @@ import Fruits from './Pages/Products/Fruits'
 import Vegetables from './Pages/Products/Vegetables'
 import Dairy from './Pages/Products/Dairy'
 import PlaceOrder from './Pages/PlaceOrder'
-import CheckoutButton from './Components/Checkoutbutton'
 
 const App = () => {
   return (
@@ -32,7 +31,6 @@ const App = () => {
       <Route path='/vegetables' element={<Vegetables />}></Route>
       <Route path='/dairy' element={<Dairy />}></Route>
       <Route path='/placeorder' element={<PlaceOrder />}></Route>
-      <Route path='/checkoutbutton' element={<CheckoutButton />}></Route>
     </Routes>
     </BrowserRouter>
   )

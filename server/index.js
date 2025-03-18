@@ -1,30 +1,30 @@
-// index.js
 const express = require('express');
 const http = require('http');
 const cors = require('cors');
-const bcrypt = require('bcrypt');
-require('./database/connection'); 
+require('./database/connection');
 const LoginAccDetails = require('./models/LoginAccDetails');
 const Order = require('./models/Orders');
-const Stripe = require('stripe');
+
 const app = express();
 app.use(express.json());
 app.use(cors());
-const stripe = new Stripe(sk_test_51R3wwRKxWJHlkcPMHuK5pKvan6AL2qPwM1IKvhQSR3SYsPAjRChP2yPMD7YlB7H0aeDlv6pWKYkC2530XXg0uIYB00b3MilnbQ);
+
+require('dotenv').config();
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+
 
 // Register user
 app.post('/register', async (req, res) => {
-    console.log("Received registration data:", req.body); 
+    console.log("Received registration data:", req.body);
     try {
         const user = await LoginAccDetails.create(req.body);
-        console.log("User saved:", user); 
+        console.log("User saved:", user);
         res.status(201).json(user);
     } catch (err) {
-        console.error("Error saving user:", err); 
+        console.error("Error saving user:", err);
         res.status(400).json({ error: err.message });
     }
 });
-
 
 // Login user
 app.post('/login', async (req, res) => {
@@ -40,40 +40,48 @@ app.post('/login', async (req, res) => {
     }
 });
 
-app.post('/orders', async (req, res) => {
+app.post('/create-checkout-session', async (req, res) => {
     try {
-      const { name, address, phone, cart, subtotal } = req.body;
-      const newOrder = new Order({ name, address, phone, cart, subtotal });
-  
-      await newOrder.save();
-      res.status(201).json({ message: "Order placed successfully!" });
-    } catch (error) {
-      res.status(500).json({ error: "Failed to place order" });
-    }
-  });
+        const { cart, subtotal, name, address, phone } = req.body;
 
-  app.post("/create-checkout-session", async (req, res) => {
-    try {
+        if (!cart || !subtotal || !name || !address || !phone) {
+            return res.status(400).json({ error: "Missing order details" });
+        }
+
         const session = await stripe.checkout.sessions.create({
-            payment_method_types: ["card"],
-            line_items: [
-                {
-                    price_data: {
-                        currency: "usd",
-                        product_data: { name: "Test Product" },
-                        unit_amount: 5000, // $50.00
-                    },
-                    quantity: 1,
+            payment_method_types: ['card'],
+            line_items: cart.map(item => ({
+                price_data: {
+                    currency: 'inr',
+                    product_data: { name: item.name },
+                    unit_amount: item.price * 100, // Stripe expects amount in paise
                 },
-            ],
-            mode: "payment",
-            success_url: "http://localhost:8000/success",
-            cancel_url: "http://localhost:8000/cancel",
+                quantity: item.kg || 1,  // ✅ Fix: Ensure `quantity` is included
+            })),
+            mode: 'payment',
+            success_url: 'http://localhost:3000/success',
+            cancel_url: 'http://localhost:3000/cancel',
         });
 
-        res.json({ id: session.id });
+        res.json({ sessionId: session.id });
+
     } catch (error) {
+        console.error("Error in checkout session:", error);
         res.status(500).json({ error: error.message });
+    }
+});
+
+
+
+// Place an order after successful payment
+app.post('/orders', async (req, res) => {
+    try {
+        const { name, address, phone, cart, subtotal } = req.body;
+        const newOrder = new Order({ name, address, phone, cart, subtotal });
+        await newOrder.save();
+        res.status(201).json({ message: "Order placed successfully!" });
+    } catch (error) {
+        res.status(500).json({ error: "Failed to place order" });
     }
 });
 
