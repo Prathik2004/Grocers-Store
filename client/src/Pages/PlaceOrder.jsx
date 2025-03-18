@@ -52,9 +52,9 @@ const PlaceOrder = () => {
             <h2>Cart Summary</h2>
             {cart.map((item, index) => (
               <div key={index} className="order-item">
-                <img src={item.img} alt={item.name} className="product-image" />
 
-                <div className="order-details">
+                <div className="order-details" key={item.id}>
+                <img src={item.img} alt={item.name} className="product-image" />
                   <p>{item.name} (x{item.kg} kg)</p>
                   <p>&#8377;{(item.price).toFixed(2)}</p>
                 </div>
