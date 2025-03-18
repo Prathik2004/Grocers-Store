@@ -6,9 +6,11 @@ const bcrypt = require('bcrypt');
 require('./database/connection'); 
 const LoginAccDetails = require('./models/LoginAccDetails');
 const Order = require('./models/Orders');
+const Stripe = require('stripe');
 const app = express();
 app.use(express.json());
 app.use(cors());
+const stripe = new Stripe(sk_test_51R3wwRKxWJHlkcPMHuK5pKvan6AL2qPwM1IKvhQSR3SYsPAjRChP2yPMD7YlB7H0aeDlv6pWKYkC2530XXg0uIYB00b3MilnbQ);
 
 // Register user
 app.post('/register', async (req, res) => {
@@ -49,6 +51,31 @@ app.post('/orders', async (req, res) => {
       res.status(500).json({ error: "Failed to place order" });
     }
   });
+
+  app.post("/create-checkout-session", async (req, res) => {
+    try {
+        const session = await stripe.checkout.sessions.create({
+            payment_method_types: ["card"],
+            line_items: [
+                {
+                    price_data: {
+                        currency: "usd",
+                        product_data: { name: "Test Product" },
+                        unit_amount: 5000, // $50.00
+                    },
+                    quantity: 1,
+                },
+            ],
+            mode: "payment",
+            success_url: "http://localhost:8000/success",
+            cancel_url: "http://localhost:8000/cancel",
+        });
+
+        res.json({ id: session.id });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
 
 const myServer = http.createServer(app);
 myServer.listen(8000, () => {

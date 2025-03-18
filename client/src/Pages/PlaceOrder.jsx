@@ -5,6 +5,7 @@ import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import axios from 'axios';
 import '../Pages/PlaceOrder.css';
+import CheckoutButton from '../Components/Checkoutbutton';
 
 const PlaceOrder = () => {
   const { cart, calculateSubtotal } = useContext(CartContext);
@@ -71,7 +72,7 @@ const PlaceOrder = () => {
             <input type="text" name="address" value={formData.address} onChange={handleChange} placeholder='Enter your address' />
             <input type="text" name="phone" value={formData.phone} onChange={handleChange} placeholder='Enter your contact number' />
 
-            <button className="confirm-order-btn" onClick={handleConfirmOrder}>Confirm Order</button>
+            <button className="confirm-order-btn" onClick={handleConfirmOrder}><CheckoutButton /></button>
           </div>
         </div>
         <Footer />
