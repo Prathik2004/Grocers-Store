@@ -30,18 +30,22 @@ const Cart = () => {
               const subtotal = item.price * item.quantity; // Calculate subtotal for each item
               return (
                 <div key={index} className="cart-item">
-                  <p>{item.name}</p>
-                  <p>&#8377;{item.price.toFixed(2)}</p> {/* Display price */}
-                  <div className="cart-quantity-controls">
-                    <button onClick={() => decreaseQuantity(item.name)}>-</button> {/* Decrease button */}
-                    <p>{item.quantity}</p>
-                    <button onClick={() => increaseQuantity(item.name)}>+</button> {/* Increase button */}
+                  <div className="cart-item-info">
+                    <img src={item.image} alt={item.name} className="cart-item-img" />
+                    <p>{item.name}</p>
                   </div>
-                  <p>&#8377;{subtotal.toFixed(2)}</p> {/* Display subtotal */}
-                  <button onClick={() => removeFromCart(item.name)}>
-                    <img src={Bin} alt="Delete Icon" className="cart-bin" />
-                  </button> {/* Remove button */}
+                  <p>&#8377;{item.price.toFixed(2)}</p>
+                  <div className="cart-quantity-controls">
+                    <button onClick={() => decreaseQuantity(item.name)}>-</button>
+                    <p>{item.quantity}</p>
+                    <button onClick={() => increaseQuantity(item.name)}>+</button>
+                  </div>
+                  <p>&#8377;{(item.price * item.quantity).toFixed(2)}</p>
+                  <button className="cart-delete-btn" onClick={() => removeFromCart(item.name)} title="Remove item">
+                    <img src={Bin} alt="Delete" />
+                  </button>
                 </div>
+
               );
             })}
             <div className="cart-total">

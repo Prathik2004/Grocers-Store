@@ -26,29 +26,39 @@
 
 .cart-header-items {
     display: grid;
-    grid-template-columns: 3fr 1fr 2fr 2fr; /* Adjusted columns to match the content */
-    gap: 15px;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 100px;
     align-items: center;
-    width: 100%; /* Ensure full width */
-    font-size: 16px;
-    color: #666;
-}
+    gap: 20px;
+    padding: 10px 0;
+  }
+  
+  .cart-item {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 100px;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    background-color: white;
+  }
+  
+  .cart-item-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .cart-item-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
 
 .cart-header-items h4 {
     font-weight: 600;
     color: #333;
     text-align: center; /* Center-align header titles */
-}
-
-.cart-item {
-    display: grid;
-    grid-template-columns: 3fr 1fr 2fr 2fr 1fr; /* Adjusted grid layout for cart items */
-    align-items: center;
-    gap: 10px;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
 }
 
 .cart-header-items h4,
@@ -121,3 +131,27 @@
     transform: translateY(-5px); /* Slight hover effect */
     transition: all 0.2s ease-in-out;
 }
+.cart-delete-btn {
+    background-color: green;
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .cart-delete-btn:hover {
+    background-color: #d93636;
+    transform: scale(1.05);
+  }
+  
+  .cart-delete-btn img {
+    width: 18px;
+    height: 18px;
+    filter: invert(100%); /* makes icon white */
+  }
