@@ -14,7 +14,7 @@ const Cart = () => {
       <Navbar />
       <div className="cart-container">
         <h1>Your Cart</h1>
-        <header className='cart-header'>
+        <header className="cart-header">
           <div className="cart-header-items">
             <h4>Cart items</h4>
             <h4>Price</h4>
@@ -39,7 +39,7 @@ const Cart = () => {
                   </div>
                   <p>&#8377;{subtotal.toFixed(2)}</p> {/* Display subtotal */}
                   <button onClick={() => removeFromCart(item.name)}>
-                    <img src={Bin} alt="Delete Icon" className='cart-bin' />
+                    <img src={Bin} alt="Delete Icon" className="cart-bin" />
                   </button> {/* Remove button */}
                 </div>
               );
@@ -47,9 +47,9 @@ const Cart = () => {
             <div className="cart-total">
               <h4>Total Subtotal: &#8377;{calculateSubtotal().toFixed(2)}</h4> {/* Display total subtotal */}
             </div>
-            <li>
-              <NavLink to='/placeorder' style={{ textDecoration: 'none' }} classname="place-order-btn">Place Order</NavLink>
-            </li>
+            <NavLink to="/placeorder" className="place-order-btn">
+              Place Order
+            </NavLink>
           </div>
         )}
       </div>
