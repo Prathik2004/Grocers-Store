@@ -1,4 +1,3 @@
-// models/LoginAccDetails.js
 const mongoose = require('mongoose');
 
 const LoginAccDetailsSchema = new mongoose.Schema({
