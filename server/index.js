@@ -57,7 +57,7 @@ app.post('/create-checkout-session', async (req, res) => {
                     product_data: { name: item.name },
                     unit_amount: item.price * 100, // Stripe expects amount in paise
                 },
-                quantity: item.kg || 1,  // ✅ Fix: Ensure `quantity` is included
+                quantity: item.kg || 1,  
             })),
             mode: 'payment',
             success_url: 'http://localhost:3000/success',
