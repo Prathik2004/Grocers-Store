@@ -3,7 +3,7 @@ import { CartContext } from '../context/CartContext';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import '../Pages/Cart.css';
-import Bin from '../assets/Bin.png';
+import Bin from '../assets/bin.png';
 import { NavLink } from 'react-router-dom';
 
 const Cart = () => {
