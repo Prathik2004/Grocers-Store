@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
-import Fruitsvegetables from 'D:/E commerce Wesbite/ecommerce1/ecommerce1/client/src/assets/Fruitsvegetables.png';
-import Vegetablelists from 'D:/E commerce Wesbite/ecommerce1/ecommerce1/client/src/Products/vegetables.json';
+import Fruitsvegetables from '../../assets/Fruitsvegetables.png';
+import Vegetablelists from '../../Products/vegetables.json';
 import './Vegetables.css';
 import { NavLink } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext.jsx';
