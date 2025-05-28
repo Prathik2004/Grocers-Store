@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import fruitsImage from '../../assets/fruitsvegetables.png';
+import Fruitsvegetables from '../../../src/assets/fruitsvegetables.png';
 import Fruitlists from '../../../src/Products/fruits.json';
 import './Fruits.css';
 import { NavLink } from 'react-router-dom';
