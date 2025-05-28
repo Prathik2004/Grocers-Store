@@ -5,7 +5,6 @@ import './Fruits.css';
 import { NavLink } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext.jsx';
 import Navbar from '../../Components/Navbar.jsx';
-
 const Fruits = () => {
   const { cart, addToCart, increaseQuantity, decreaseQuantity } = useContext(CartContext);
   const [sortOption, setSortOption] = useState('');
