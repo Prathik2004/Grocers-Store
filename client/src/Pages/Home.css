@@ -146,6 +146,7 @@ body{
 .products {
     /* background-color: orange; */
     border-radius: 10%;
+    height: 180px;
     overflow: hidden; /* Ensure content doesn't overflow */
     display: flex;
     flex-direction: column;
@@ -182,12 +183,17 @@ body{
 }
 
 .product-image img {
+    position: relative;
+    bottom: 40px; 
+    right: 40px;
     height: 150px;
     width: 150px;
 }
 
 .product-name {
     text-align: center;
-    margin-top: 10px; /* Space between image and name */
+    position: relative;
+    bottom: 20px;
+    margin-top: 0px; /* Space between image and name */
 }
 
