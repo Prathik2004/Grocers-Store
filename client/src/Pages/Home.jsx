@@ -12,7 +12,6 @@ import Oil from '../assets/Oil.png'
 import Onion from '../assets/Onion.png'
 import Potato from '../assets/Potato.png'
 import Footer from '../Components/Footer';
-import Chatbot from '../Components/Chatbot';
 
 const Home = () => {
   return (
@@ -113,7 +112,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Chatbot />
       <Footer />
     </div>
   );
